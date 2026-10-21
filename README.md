@@ -6,12 +6,14 @@
 
 ### *The Curated Landscape of Institutional SaaS Terminals, Open-Source Market Data Engines & AI-Native Analyst Workflows*
 
+<a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![GitHub Stars](https://img.shields.io/github/stars/ishandutta2007/Awesome-Financial-Research-Terminal?style=social&color=white)](https://github.com/ishandutta2007/Awesome-Financial-Research-Terminal/stargazers)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![Python 3.9+](https://img.shields.io/badge/Python-3.9+-3776AB.svg?logo=python&logoColor=white)](https://www.python.org/)
 [![Status](https://img.shields.io/badge/Status-Maintained%202026-success.svg)](#)
+<a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
 
 <!-- keywords: financial terminal, bloomberg terminal alternative, openbb, market data, factset, capital iq, lseg workspace, algorithmic trading, quantitative finance, ai agents, sec edgar, xbrl, mcp server, backtesting, equity research -->
 
@@ -19,7 +21,7 @@
   <b>A comprehensive directory cataloging both multi-billion-dollar enterprise platforms and transparent open-source stacks. Built for quantitative researchers, hedge funds, independent analysts, fintech engineers, and AI agents.</b>
 </p>
 
-[🌐 SaaS Platforms](#-saas-hosted-platforms) • [⚡ Open-Source Projects](#-open-source-github-projects) • [📊 Sector Dynamics](#-sector-overview--market-dynamics) • [🛠️ Terminal Stacks](#-recommended-diy-open-stack-architectures) • [🤝 Contributing](#-how-to-contribute)
+[🌐 SaaS Platforms](#-saas-hosted-platforms) • [⚡ Open-Source Projects](#-open-source-github-projects) • [📊 Sector Dynamics](#-sector-overview--market-dynamics) • [🛠️ Terminal Stacks](#-recommended-diy-open-stack-architectures) • [🤝 Contributing](#-how-to-contribute) • [💖 Support](#-support--community)
 
 ---
 
@@ -33,6 +35,8 @@
 - [🛠️ Recommended DIY Open-Stack Architectures](#-recommended-diy-open-stack-architectures)
 - [🚀 Quickstart: Open Research Terminal in 60 Seconds](#-quickstart-open-research-terminal-in-60-seconds)
 - [🤝 How to Contribute](#-how-to-contribute)
+- [🌟 Star History](#--star-history)
+- [💖 Support & Community](#-support--community)
 - [⚖️ Disclaimer](#️-disclaimer)
 
 ---
@@ -189,6 +193,31 @@ Contributions are warmly welcomed! Help keep this repository the authoritative r
 5. 🚀 **Submit a Pull Request** with a concise explanation of why the addition benefits the ecosystem.
 
 ⭐ **Don't forget to star the repository if it saved you from a $30,000 terminal bill!**
+
+---
+
+##  Star History
+
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Financial-Research-Terminal&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Financial-Research-Terminal&type=date&legend=top-left)
+
+---
+
+## 💖 Support & Community
+
+Thank you for exploring and utilizing **Awesome-Financial-Research-Terminal**! 🙌 If you found this curated ecosystem resource helpful for your research, trading workflows, or quantitative projects, please consider supporting the project:
+
+- ⭐ **Star this repository** to help others discover it across GitHub.
+- 🍴 **Fork and contribute** new open-source stacks, TUI tools, or pricing updates.
+- 📢 **Share with peers**, quantitative communities, and financial developers.
+- ☕ **Buy me a coffee**: If you'd like to support ongoing research and maintenance, you can sponsor the project directly via the [GitHub Sponsor Dashboard](https://github.com/sponsors/ishandutta2007).
+
+<div align="center">
+
+<a href="https://github.com/sponsors/ishandutta2007">
+  <img src="https://img.shields.io/badge/Sponsor-%E2%9D%A4-ea4aaa?style=for-the-badge&logo=github-sponsors&logoColor=white" alt="Sponsor ishandutta2007" />
+</a>
+
+</div>
 
 ---
 
