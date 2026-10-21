@@ -1,0 +1,215 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070a14" />
+      <stop offset="50%" stop-color="#0c1326" />
+      <stop offset="100%" stop-color="#05070d" />
+    </linearGradient>
+
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8">
+        <animate attributeName="stop-color" values="#38bdf8;#818cf8;#34d399;#38bdf8" dur="8s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="50%" stop-color="#818cf8">
+        <animate attributeName="stop-color" values="#818cf8;#34d399;#38bdf8;#818cf8" dur="8s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#34d399">
+        <animate attributeName="stop-color" values="#34d399;#38bdf8;#818cf8;#34d399" dur="8s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+
+    <linearGradient id="chartGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.0" />
+    </linearGradient>
+
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0.0" />
+    </linearGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.75" stroke-opacity="0.45" />
+    </pattern>
+
+    <!-- Glow Filter -->
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .title-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 800;
+      font-size: 46px;
+      letter-spacing: -0.5px;
+    }
+    .subtitle-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 500;
+      font-size: 20px;
+      letter-spacing: 0.2px;
+      fill: #94a3b8;
+    }
+    .badge-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      fill: #cbd5e1;
+    }
+    .code-font {
+      font-family: 'JetBrains Mono', 'Fira Code', Menlo, Consolas, monospace;
+      font-size: 12px;
+      fill: #38bdf8;
+    }
+    .pulse-dot {
+      animation: pulse 2s infinite ease-in-out;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 0.4; r: 3; }
+      50% { opacity: 1; r: 5; }
+    }
+  </style>
+
+  <!-- Deep Terminal Background -->
+  <rect width="1200" height="420" rx="16" fill="url(#bgGrad)" />
+  <rect width="1200" height="420" rx="16" fill="url(#grid)" />
+  <rect width="1200" height="420" rx="16" fill="none" stroke="#334155" stroke-width="1.5" stroke-opacity="0.6" />
+
+  <!-- Background Ambient Glow Blobs -->
+  <circle cx="150" cy="80" r="140" fill="#38bdf8" opacity="0.08" filter="url(#neonGlow)" />
+  <circle cx="1050" cy="320" r="180" fill="#10b981" opacity="0.07" filter="url(#neonGlow)" />
+
+  <!-- DYNAMIC LAYER 1: Animated Stock Chart Wave in Lower Half -->
+  <g opacity="0.85">
+    <!-- Area Fill Under Line -->
+    <path d="M 50 350 Q 200 320, 350 335 T 650 290 T 950 260 T 1150 230 L 1150 380 L 50 380 Z"
+          fill="url(#chartGrad)" />
+
+    <!-- Animated Line Path -->
+    <path d="M 50 350 Q 200 320, 350 335 T 650 290 T 950 260 T 1150 230"
+          fill="none" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" filter="url(#neonGlow)">
+      <animate attributeName="stroke-dasharray" values="1000, 0; 0, 1000; 1000, 0" dur="14s" repeatCount="indefinite" />
+    </path>
+  </g>
+
+  <!-- DYNAMIC LAYER 2: Candlestick Activity on Bottom Right (Subtle, strictly in background) -->
+  <g opacity="0.45" transform="translate(860, 240)">
+    <!-- Candle 1 (Green) -->
+    <line x1="30" y1="20" x2="30" y2="110" stroke="#10b981" stroke-width="1.5" />
+    <rect x="23" y="40" width="14" height="45" rx="2" fill="#10b981">
+      <animate attributeName="height" values="45;55;40;45" dur="4s" repeatCount="indefinite" />
+      <animate attributeName="y" values="40;30;45;40" dur="4s" repeatCount="indefinite" />
+    </rect>
+
+    <!-- Candle 2 (Green) -->
+    <line x1="65" y1="10" x2="65" y2="95" stroke="#10b981" stroke-width="1.5" />
+    <rect x="58" y="25" width="14" height="50" rx="2" fill="#10b981">
+      <animate attributeName="height" values="50;40;60;50" dur="5s" repeatCount="indefinite" />
+      <animate attributeName="y" values="25;35;15;25" dur="5s" repeatCount="indefinite" />
+    </rect>
+
+    <!-- Candle 3 (Red) -->
+    <line x1="100" y1="25" x2="100" y2="105" stroke="#ef4444" stroke-width="1.5" />
+    <rect x="93" y="35" width="14" height="35" rx="2" fill="#ef4444">
+      <animate attributeName="height" values="35;45;30;35" dur="4.5s" repeatCount="indefinite" />
+      <animate attributeName="y" values="35;25;40;35" dur="4.5s" repeatCount="indefinite" />
+    </rect>
+
+    <!-- Candle 4 (Green) -->
+    <line x1="135" y1="5" x2="135" y2="90" stroke="#10b981" stroke-width="1.5" />
+    <rect x="128" y="15" width="14" height="60" rx="2" fill="#10b981">
+      <animate attributeName="height" values="60;70;50;60" dur="6s" repeatCount="indefinite" />
+      <animate attributeName="y" values="15;5;25;15" dur="6s" repeatCount="indefinite" />
+    </rect>
+
+    <!-- Candle 5 (Green) -->
+    <line x1="170" y1="0" x2="170" y2="80" stroke="#10b981" stroke-width="1.5" />
+    <rect x="163" y="10" width="14" height="55" rx="2" fill="#10b981">
+      <animate attributeName="height" values="55;45;65;55" dur="5.5s" repeatCount="indefinite" />
+      <animate attributeName="y" values="10;20;0;10" dur="5.5s" repeatCount="indefinite" />
+    </rect>
+  </g>
+
+  <!-- FOREGROUND LAYER: Content stays completely visible, crisp, and high-contrast -->
+
+  <!-- Top Terminal Bar -->
+  <g transform="translate(60, 42)">
+    <circle cx="0" cy="0" r="6" fill="#ef4444" opacity="0.8" />
+    <circle cx="18" cy="0" r="6" fill="#f59e0b" opacity="0.8" />
+    <circle cx="36" cy="0" r="6" fill="#10b981" opacity="0.8" />
+    <text x="60" y="4" class="code-font" opacity="0.85">FINANCIAL_TERMINAL_ECOSYSTEM_v2026 // STACK: SaaS + OSS + AI AGENTS</text>
+  </g>
+
+  <!-- Main Headline Title with Gradient -->
+  <text x="60" y="125" class="title-text" fill="url(#accentGrad)">
+    Awesome Financial Research Terminal
+  </text>
+
+  <!-- Subtitle -->
+  <text x="60" y="172" class="subtitle-text">
+    Curated Hub for Institutional SaaS Terminals, Open-Source Stacks &amp; AI-Native Market Intelligence
+  </text>
+
+  <!-- Animated Live Status Indicator Pill -->
+  <g transform="translate(60, 205)">
+    <rect x="0" y="0" width="170" height="30" rx="15" fill="#0f172a" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.4" />
+    <circle cx="16" cy="15" r="4" fill="#10b981">
+      <animate attributeName="opacity" values="1;0.3;1" dur="1.8s" repeatCount="indefinite" />
+    </circle>
+    <text x="28" y="20" class="badge-text" fill="#38bdf8" font-size="11">MARKET DATA ACTIVE</text>
+  </g>
+
+  <g transform="translate(245, 205)">
+    <rect x="0" y="0" width="165" height="30" rx="15" fill="#0f172a" stroke="#818cf8" stroke-width="1" stroke-opacity="0.4" />
+    <circle cx="16" cy="15" r="4" fill="#818cf8">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2.2s" repeatCount="indefinite" />
+    </circle>
+    <text x="28" y="20" class="badge-text" fill="#a5b4fc" font-size="11">AI AGENTS &amp; MCP</text>
+  </g>
+
+  <g transform="translate(425, 205)">
+    <rect x="0" y="0" width="175" height="30" rx="15" fill="#0f172a" stroke="#34d399" stroke-width="1" stroke-opacity="0.4" />
+    <circle cx="16" cy="15" r="4" fill="#34d399">
+      <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <text x="28" y="20" class="badge-text" fill="#6ee7b7" font-size="11">OPEN-SOURCE STACKS</text>
+  </g>
+
+  <!-- Feature Tags / Category Cards in Foreground -->
+  <g transform="translate(60, 260)">
+    <!-- Pill 1 -->
+    <rect x="0" y="0" width="180" height="36" rx="8" fill="#1e293b" fill-opacity="0.75" stroke="#334155" stroke-width="1" />
+    <text x="14" y="23" class="badge-text">📊 Bloomberg &amp; FactSet</text>
+
+    <!-- Pill 2 -->
+    <rect x="192" y="0" width="160" height="36" rx="8" fill="#1e293b" fill-opacity="0.75" stroke="#334155" stroke-width="1" />
+    <text x="14" y="23" class="badge-text">🌐 OpenBB Platform</text>
+
+    <!-- Pill 3 -->
+    <rect x="364" y="0" width="155" height="36" rx="8" fill="#1e293b" fill-opacity="0.75" stroke="#334155" stroke-width="1" />
+    <text x="14" y="23" class="badge-text">⚡ Qlib &amp; Algorithmic</text>
+
+    <!-- Pill 4 -->
+    <rect x="531" y="0" width="170" height="36" rx="8" fill="#1e293b" fill-opacity="0.75" stroke="#334155" stroke-width="1" />
+    <text x="14" y="23" class="badge-text">📑 SEC EDGAR &amp; XBRL</text>
+
+    <!-- Pill 5 -->
+    <rect x="713" y="0" width="175" height="36" rx="8" fill="#1e293b" fill-opacity="0.75" stroke="#334155" stroke-width="1" />
+    <text x="14" y="23" class="badge-text">🤖 FinGPT &amp; MCP Servers</text>
+  </g>
+
+  <!-- Bottom Terminal Status Bar -->
+  <g transform="translate(60, 385)">
+    <text x="0" y="0" class="code-font" fill="#64748b" font-size="11">
+      TICKER: SPX +0.48% | NDX +0.72% | US10Y 4.18% | B-PIPE OK | SEC-EDGAR CONNECTED | OPENBB v4.5 RUNNING
+    </text>
+  </g>
+</svg>
